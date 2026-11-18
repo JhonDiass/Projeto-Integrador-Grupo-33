@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Gestão de Estoque{% endblock %}</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="{% url 'home' %}">Gestão de Estoque</a></h1>
+
+        <nav>
+            <a href="{% url 'listar_fornecedores' %}">Fornecedores</a>
+            <a href="{% url 'cadastrar_fornecedor' %}">Novo fornecedor</a>
+            <a href="{% url 'listar_produtos' %}">Produtos em estoque</a>
+            <a href="{% url 'cadastrar_produto' %}">Novo produto</a>
+            <a href="/admin/">Administração</a>
+        </nav>
+    </header>
+
+    <main>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert {{ message.tags }}">
+                    {{ message }}
+                 </div>
+            {% endfor %}
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>

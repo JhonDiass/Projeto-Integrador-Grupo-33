@@ -1,0 +1,20 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+<h2>Excluir fornecedor</h2>
+
+<p>
+    Deseja realmente excluir?
+    <strong>{{ fornecedor.nome }}</strong>?
+</p>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <button type="submit">Confirmar exclusão</button>
+</form>
+
+<a href="{% url 'listar_fornecedores' %}">Cancelar</a>
+
+{% endblock %}
