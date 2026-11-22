@@ -1,0 +1,264 @@
+/* =========================
+   PÁGINA DE PRODUTOS
+========================= */
+
+.products-page {
+    padding: 25px;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.products-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.products-header h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 7px;
+    color: #171b2d;
+}
+
+.products-header p {
+    font-size: 12px;
+    color: #788098;
+}
+
+
+/* =========================
+   BOTÃO NOVO PRODUTO
+========================= */
+
+.new-product-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+
+    background: #6035e6;
+    color: #fff;
+
+    border-radius: 8px;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: .2s ease;
+}
+
+.new-product-btn:hover {
+    background: #4d27c9;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESUMO
+========================= */
+
+.products-summary {
+    background: #fff;
+    border: 1px solid #eceaf2;
+    border-radius: 10px;
+
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.products-summary h3 {
+    font-size: 16px;
+    font-weight: 750;
+    margin-bottom: 10px;
+    color: #171b2d;
+}
+
+.products-summary p {
+    font-size: 12px;
+    color: #788098;
+}
+
+
+/* =========================
+   CONTAINER DA TABELA
+========================= */
+
+.products-table-container {
+    background: #fff;
+    border: 1px solid #eceaf2;
+    border-radius: 10px;
+
+    padding: 15px;
+}
+
+.table-header {
+    margin-bottom: 18px;
+}
+
+.table-header h3 {
+    font-size: 15px;
+    font-weight: 750;
+    color: #171b2d;
+}
+
+
+/* =========================
+   TABELA
+========================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    font-size: 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+
+/* Cabeçalho da tabela */
+
+.products-table thead {
+    background: #f0edf8;
+}
+
+.products-table th {
+    padding: 12px 10px;
+
+    font-size: 10px;
+    font-weight: 700;
+    color: #69748c;
+}
+
+.products-table th:first-child {
+    border-radius: 6px 0 0 6px;
+}
+
+.products-table th:last-child {
+    border-radius: 0 6px 6px 0;
+}
+
+
+/* Linhas */
+
+.products-table td {
+    padding: 14px 10px;
+
+    border-bottom: 1px solid #eceaf2;
+    color: #171b2d;
+}
+
+.products-table tbody tr:hover {
+    background: #faf9fd;
+}
+
+.products-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================
+   COLUNAS ESPECÍFICAS
+========================= */
+
+.product-name {
+    font-weight: 600;
+}
+
+.product-price {
+    font-weight: 500;
+}
+
+
+/* =========================
+   AÇÕES
+========================= */
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-actions a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    transition: .2s ease;
+}
+
+.action-edit {
+    color: #6035e6;
+}
+
+.action-edit:hover {
+    color: #4d27c9;
+}
+
+.action-delete {
+    color: #dc4444;
+}
+
+.action-delete:hover {
+    color: #b91c1c;
+}
+
+
+/* =========================
+   TABELA VAZIA
+========================= */
+
+.empty-table {
+    text-align: center;
+    padding: 35px 15px !important;
+    color: #788098 !important;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.table-footer {
+    padding-top: 15px;
+    border-top: 1px solid #eceaf2;
+    margin-top: 5px;
+}
+
+.table-footer span {
+    font-size: 11px;
+    color: #788098;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    .products-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .products-page {
+        padding: 18px;
+    }
+
+    .products-table-container {
+        padding: 12px;
+    }
+}

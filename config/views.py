@@ -1,4 +1,11 @@
-from django.shortcuts import render
+# produtos/views.py
 
-def home(request): # Define a função home, que é responsável por lidar com a lógica da página inicial do sistema de gestão de estoque.
-    return render(request, 'home.html') # Renderiza a página inicial, utilizando o template home.html.
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+
+def pre_login(request):
+    return render(request, 'pre_login.html')
+
+@login_required
+def home(request):
+    return render(request, 'home.html')

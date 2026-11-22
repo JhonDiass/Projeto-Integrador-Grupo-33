@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Stoqer{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+    <div class="home-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="home-sidebar">
+
+            <div class="sidebar-brand">
+                <div class="brand-icon">
+                    <span></span>
+                </div>
+
+                <h1>Stoqer<span>.</span></h1>
+            </div>
+
+            <div class="sidebar-navigation">
+
+                <span class="sidebar-title">GESTÃO DE ESTOQUE</span>
+
+                <nav>
+
+                    <a href="{% url 'home' %}" class="sidebar-link">
+                        <span class="link-dot"></span>
+                        Home
+                    </a>
+
+                    <a href="{% url 'listar_produtos' %}" class="sidebar-link">
+                        <span class="link-dot"></span>
+                        Produtos
+                    </a>
+
+                    <a href="{% url 'listar_fornecedores' %}" class="sidebar-link">
+                        <span class="link-dot"></span>
+                        Fornecedores
+                    </a>
+                </nav>
+
+            </div>
+
+            <div class="sidebar-bottom">
+                <strong>Stoqer</strong>
+
+                <div class="sidebar-user">
+                    <span>{{ user.username }}</span>
+                    <span>•</span>
+                    <a href="{% url 'admin:logout' %}"><span>Sair</span></a>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- ÁREA PRINCIPAL -->
+        <main class="home-main">
+
+            <!-- TOPBAR -->
+            <header class="home-topbar">
+
+                <div class="breadcrumb">
+                    Stoqer <span>/</span>
+                    {% block breadcrumb %}Gerenciamento de estoque{% endblock %}
+                </div>
+
+                <div class="topbar-user">
+                    Bem-vindo, {{ user.username }}
+                </div>
+
+            </header>
+
+
+            <!-- CONTEÚDO DE CADA PÁGINA -->
+            <section class="home-content">
+                {% block content %}
+                {% endblock %}
+
+                {% if messages %}
+                    <div class="messages-container">
+                        {% for message in messages %}
+                            <div class="alert-message {{ message.tags }}">
+                            {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

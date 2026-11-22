@@ -1,58 +1,123 @@
-{% extends 'home.html' %}
-
+{% extends 'base.html' %}
 {% block title %}Produtos{% endblock %}
+
+{%load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/listar_produtos.css' %}">
+{% endblock %}
 
 {% block content %}
 
-<h2>Produtos cadastrados</h2>
+<section class="products-page">
 
-<a href="{% url 'cadastrar_produto' %}">
-    + Novo produto
-</a>
+    <!-- Cabeçalho -->
+    <div class="products-header">
 
-<table>
-    <thead>
-        <tr>
-            <th>Código</th>
-            <th>Nome</th>
-            <th>Categoria</th>
-            <th>Fornecedor</th>
-            <th>Preç<object data="" type=""></object></th>
-            <th>Ações</th>
-        </tr>
-    </thead>
+        <div>
+            <h2>Produtos</h2>
+            <p>Consulte, cadastre e gerencie seus produtos.</p>
+        </div>
 
-    <tbody>
+        <a href="{% url 'cadastrar_produto' %}" class="new-product-btn">
+            + Novo produto
+        </a>
 
-        {% for produto in produtos %}
+    </div>
 
-        <tr>
-            <td>{{ produto.codigo }}</td>
-            <td>{{ produto.nome }}</td>
-            <td>{{ produto.categoria }}</td>
-            <td>{{ produto.fornecedor.nome }}</td>
-            <td>R$ {{ produto.preco }}</td>
 
-            <td>
-                <a href="{% url 'editar_produto' produto.id %}">
-                    Editar
-                </a>
+    <!-- Resumo -->
+    <div class="products-summary">
 
-                <a href="{% url 'deletar_produto' produto.id %}">
-                    Excluir
-                </a>
-            </td>
-        </tr>
+        <h3>{{ produtos.count }} produto(s) cadastrado(s)</h3>
 
-        {% empty %}
+        <p>
+            Confira os produtos registrados no sistema.
+        </p>
 
-        <tr>
-            <td colspan="7">Nenhum produto cadastrado.</td>
-        </tr>
+    </div>
 
-        {% endfor %}
 
-    </tbody>
-</table>
+    <!-- Tabela -->
+    <section class="products-table-container">
+
+        <div class="table-header">
+            <h3>Lista de produtos</h3>
+        </div>
+
+        <div class="table-wrapper">
+
+            <table class="products-table">
+
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Categoria</th>
+                        <th>Fornecedor</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for produto in produtos %}
+
+                    <tr>
+                        <td>{{ produto.codigo }}</td>
+
+                        <td class="product-name">
+                            {{ produto.nome }}
+                        </td>
+
+                        <td>{{ produto.categoria }}</td>
+
+                        <td>{{ produto.fornecedor.nome }}</td>
+
+                        <td class="product-price">
+                            R$ {{ produto.preco }}
+                        </td>
+
+                        <td>{{ produto.quantidade_estoque }}</td>
+
+                        <td class="product-actions">
+
+                            <a href="{% url 'editar_produto' produto.id %}"
+                               class="action-edit">
+                                Editar
+                            </a>
+
+                            <a href="{% url 'deletar_produto' produto.id %}"
+                               class="action-delete">
+                                Excluir
+                            </a>
+
+                        </td>
+                    </tr>
+
+                    {% empty %}
+
+                    <tr>
+                        <td colspan="6" class="empty-table">
+                            Nenhum produto cadastrado.
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="table-footer">
+            <span>Mostrando {{ produtos.count }} registros</span>
+        </div>
+
+    </section>
+
+</section>
 
 {% endblock %}

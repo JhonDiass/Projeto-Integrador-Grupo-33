@@ -21,6 +21,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('fornecedores/', include('fornecedores.urls')), # Inclui as URLs do aplicativo fornecedores, permitindo que as URLs definidas em fornecedores/urls.py sejam acessíveis a partir do caminho 'fornecedores/'.
-    path('', views.home, name='home'), # Define a URL para a página inicial do sistema de gestão de estoque, que chama a função de visualização home e atribui o nome 'home' para referência.
+    path('', views.pre_login, name='pre_login'), # Define a URL para a página inicial do sistema de gestão de estoque, que chama a função de visualização home e atribui o nome 'home' para referência.
+    path('home/', views.home, name='home'),
     path('produtos/', include('produtos.urls')), # Inclui as URLs do aplicativo produtos, permitindo que as URLs definidas em produtos/urls.py sejam acessíveis a partir do caminho 'produtos/'.
 ]

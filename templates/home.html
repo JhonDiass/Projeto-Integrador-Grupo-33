@@ -1,40 +1,83 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
 
-    <title>{% block title %}Gestão de Estoque{% endblock %}</title>
+{% block title %}Home{% endblock %}
 
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
+{% load static %}
 
-<body>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
 
-    <header>
-        <h1><a href="{% url 'home' %}">Gestão de Estoque</a></h1>
+{% block content %}
 
-        <nav>
-            <a href="{% url 'listar_fornecedores' %}">Fornecedores</a>
-            <a href="{% url 'cadastrar_fornecedor' %}">Novo fornecedor</a>
-            <a href="{% url 'listar_produtos' %}">Produtos em estoque</a>
-            <a href="{% url 'cadastrar_produto' %}">Novo produto</a>
-            <a href="/admin/">Administração</a>
-        </nav>
-    </header>
+        <!-- PÁGINA -->
+        <section class="home-content">
 
-    <main>
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert {{ message.tags }}">
-                    {{ message }}
-                 </div>
-            {% endfor %}
-        {% endif %}
-        {% block content %}
-        {% endblock %}
+            <!-- BOAS-VINDAS -->
+            <section class="welcome-card">
+
+                <div class="welcome-text">
+
+                    <span class="welcome-tag">
+                        GESTÃO DE ESTOQUE
+                    </span>
+
+                    <h2>Bem-vindo ao Stoqer!</h2>
+
+                    <p>
+                        Simplifique o gerenciamento do seu estoque.
+                        Organize seus produtos, acompanhe movimentações
+                        e tenha mais controle sobre suas operações
+                        em um só lugar.
+                    </p>
+
+                </div>
+
+                <div class="welcome-decoration">
+                    <div class="decoration-circle"></div>
+                    <div class="decoration-box box-one"></div>
+                    <div class="decoration-box box-two"></div>
+                    <div class="decoration-box box-three"></div>
+                </div>
+
+            </section>
+
+
+            <!-- SOBRE -->
+            <section class="home-section">
+
+                <div class="section-header">
+                    <h3>Conheça o sistema</h3>
+                    <p>Um espaço pensado para facilitar sua rotina.</p>
+                </div>
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        <span class="info-box-icon"></span>
+                    </div>
+
+                    <div>
+                        <h4>Controle e organização</h4>
+
+                        <p>
+                            O Stoqer é uma aplicação voltada ao
+                            gerenciamento de estoque, reunindo o controle
+                            de produtos, fornecedores e movimentações.
+                            A proposta é centralizar informações e
+                            facilitar o acompanhamento dos recursos
+                            armazenados, proporcionando uma gestão
+                            mais organizada e eficiente.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+        </section>
+
     </main>
 
-</body>
-</html>
+</div>
+
+{% endblock %}

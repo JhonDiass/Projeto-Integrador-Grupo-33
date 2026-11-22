@@ -1,0 +1,659 @@
+
+/* ==============================
+   RESET E CONTAINER
+============================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.prelogin-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #1e1b2e;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==============================
+   LADO ESQUERDO
+============================== */
+
+.prelogin-left {
+    width: 52%;
+    padding: 45px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prelogin-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-symbol {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1ebff;
+    border-radius: 12px;
+}
+
+.brand-cube {
+    width: 19px;
+    height: 19px;
+    border: 3px solid #6938e8;
+    transform: rotate(45deg);
+    border-radius: 3px;
+}
+
+.brand-text h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.brand-text h1 span {
+    color: #6938e8;
+}
+
+.brand-text p {
+    font-size: 12px;
+    color: #777386;
+    margin-top: 2px;
+}
+
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+============================== */
+
+.prelogin-main {
+    max-width: 530px;
+    margin: auto 0;
+    padding: 65px 0;
+}
+
+.prelogin-main h2 {
+    font-size: clamp(36px, 4vw, 54px);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.prelogin-main h2 span {
+    display: block;
+    color: #6938e8;
+}
+
+.prelogin-description {
+    font-size: 16px;
+    color: #777386;
+    line-height: 1.8;
+    max-width: 450px;
+    margin-bottom: 32px;
+}
+
+
+/* ==============================
+   BOTÃO
+============================== */
+
+.prelogin-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 16px 22px;
+    background: #6938e8;
+    color: #ffffff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(105, 56, 232, .18);
+    transition: .25s ease;
+}
+
+.prelogin-button:hover {
+    background: #5428ca;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(105, 56, 232, .25);
+}
+
+.button-arrow {
+    font-size: 20px;
+    transition: .2s ease;
+}
+
+.prelogin-button:hover .button-arrow {
+    transform: translateX(4px);
+}
+
+
+/* ==============================
+   FUNCIONALIDADES
+============================== */
+
+.prelogin-features {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+    flex-wrap: wrap;
+}
+
+.prelogin-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    background: #f1ebff;
+    color: #6938e8;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.feature-text h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.feature-text p {
+    font-size: 12px;
+    color: #777386;
+}
+
+
+/* Ícones */
+
+.feature-box-icon {
+    width: 18px;
+    height: 18px;
+    border: 2px solid currentColor;
+    border-radius: 4px;
+    position: relative;
+}
+
+.feature-box-icon::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -2px;
+    width: 18px;
+    border-top: 2px solid currentColor;
+}
+
+.feature-chart-icon {
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    position: relative;
+}
+
+.feature-chart-icon::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+    width: 5px;
+    height: 10px;
+    background: currentColor;
+}
+
+.feature-chart-icon::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 11px;
+    width: 5px;
+    height: 16px;
+    background: currentColor;
+}
+
+.feature-check-icon {
+    font-style: normal;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.feature-check-icon::before {
+    content: "✓";
+}
+
+
+/* ==============================
+   RODAPÉ
+============================== */
+
+.prelogin-footer {
+    font-size: 12px;
+    color: #a09aaf;
+}
+
+
+/* ==============================
+   LADO DIREITO
+============================== */
+
+.prelogin-right {
+    width: 48%;
+    background: linear-gradient(145deg, #652ee5, #7745ec);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 8%;
+    color: #ffffff;
+}
+
+.prelogin-decoration {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .04);
+}
+
+.decoration-one {
+    width: 550px;
+    height: 550px;
+    top: -250px;
+    right: -200px;
+}
+
+.decoration-two {
+    width: 450px;
+    height: 450px;
+    bottom: -200px;
+    left: -180px;
+}
+
+.prelogin-banner-content {
+    width: 100%;
+    max-width: 520px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 50px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.tag-dot {
+    width: 8px;
+    height: 8px;
+    background: #c7ffb9;
+    border-radius: 50%;
+}
+
+.prelogin-banner-content h2 {
+    font-size: clamp(32px, 3.5vw, 46px);
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+}
+
+.prelogin-banner-content h2 span {
+    display: block;
+    color: #d5c4ff;
+}
+
+.prelogin-banner-content > p {
+    color: #e5d9ff;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 400px;
+}
+
+
+/* ==============================
+   ILUSTRAÇÃO
+============================== */
+
+.stock-illustration {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    margin-top: 45px;
+}
+
+.illustration-shadow {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    height: 20px;
+    background: rgba(30, 10, 90, .2);
+    border-radius: 50%;
+}
+
+
+/* Prateleira */
+
+.shelf-illustration {
+    position: absolute;
+    width: 250px;
+    height: 260px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, .08);
+    border: 8px solid #b9a0ff;
+    border-radius: 12px 12px 0 0;
+    border-bottom: none;
+}
+
+.shelf-top {
+    height: 12px;
+    width: 100%;
+    background: #d3c2ff;
+}
+
+.shelf-level {
+    width: 100%;
+    height: 78px;
+    border-bottom: 10px solid #b9a0ff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 12px;
+    padding-bottom: 10px;
+}
+
+.stock-box {
+    width: 45px;
+    border-radius: 5px 5px 0 0;
+    background: #cbb6ff;
+    position: relative;
+}
+
+.stock-box::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    border-top: 3px solid rgba(100, 50, 190, .2);
+}
+
+.box-a {
+    height: 38px;
+}
+
+.box-b {
+    height: 50px;
+    background: #d8c8ff;
+}
+
+.box-c {
+    height: 42px;
+}
+
+.box-d {
+    height: 45px;
+    background: #d8c8ff;
+}
+
+.box-e {
+    height: 35px;
+}
+
+.box-f {
+    height: 40px;
+}
+
+.box-g {
+    height: 50px;
+}
+
+.box-h {
+    height: 30px;
+    background: #d8c8ff;
+}
+
+
+/* Checklist */
+
+.stock-checklist {
+    position: absolute;
+    width: 115px;
+    height: 150px;
+    left: 5%;
+    bottom: 45px;
+    background: #e6dcff;
+    border-radius: 10px;
+    padding: 30px 15px 15px;
+    box-shadow: 0 15px 30px rgba(30, 10, 90, .15);
+    transform: rotate(-8deg);
+}
+
+.checklist-clip {
+    position: absolute;
+    width: 40px;
+    height: 12px;
+    background: #a788f4;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 13px;
+}
+
+.checklist-item span {
+    color: #6938e8;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.checklist-line {
+    height: 6px;
+    width: 45px;
+    background: #b7a0ed;
+    border-radius: 10px;
+}
+
+
+/* Caixas */
+
+.illustration-box {
+    position: absolute;
+    background: #b99aff;
+    border-radius: 6px;
+}
+
+.illustration-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 100%;
+    background: rgba(100, 50, 190, .15);
+}
+
+.box-bottom-one {
+    width: 65px;
+    height: 65px;
+    right: 8%;
+    bottom: 35px;
+}
+
+.box-bottom-two {
+    width: 55px;
+    height: 55px;
+    right: 0;
+    bottom: 100px;
+    background: #d0baff;
+}
+
+
+/* Cartão flutuante */
+
+.floating-card {
+    position: absolute;
+    right: 3%;
+    top: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #24154d;
+    box-shadow: 0 15px 40px rgba(30, 10, 90, .2);
+}
+
+.floating-check {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: #e8defe;
+    color: #6938e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.floating-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.floating-card-text strong {
+    font-size: 12px;
+}
+
+.floating-card-text span {
+    font-size: 10px;
+    color: #8a829e;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 1100px) {
+
+    .prelogin-left {
+        padding: 40px 6%;
+    }
+
+    .prelogin-right {
+        padding: 40px 6%;
+    }
+
+    .prelogin-features {
+        gap: 20px;
+    }
+
+    .prelogin-feature {
+        gap: 8px;
+    }
+
+    .stock-checklist {
+        left: 0;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .prelogin-container {
+        flex-direction: column;
+    }
+
+    .prelogin-left {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .prelogin-right {
+        width: 100%;
+        min-height: 650px;
+    }
+
+    .prelogin-main {
+        margin: 80px 0;
+    }
+
+    .prelogin-banner-content {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .prelogin-left {
+        padding: 30px 7%;
+    }
+
+    .brand-text h1 {
+        font-size: 26px;
+    }
+
+    .prelogin-main h2 {
+        font-size: 36px;
+    }
+
+    .prelogin-features {
+        flex-direction: column;
+    }
+
+    .prelogin-feature {
+        gap: 15px;
+    }
+
+    .prelogin-right {
+        padding: 40px 7%;
+        min-height: 600px;
+    }
+
+    .prelogin-banner-content h2 {
+        font-size: 32px;
+    }
+
+    .stock-illustration {
+        transform: scale(.85);
+        transform-origin: center;
+    }
+
+    .floating-card {
+        right: -5%;
+    }
+}

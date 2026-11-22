@@ -1,20 +1,55 @@
 {% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Stoger | Excluir fornecedor{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/deletar_produto.css' %}">
+{% endblock %}
 
 {% block content %}
 
-<h2>Excluir fornecedor</h2>
+<section class="delete-page">
 
-<p>
-    Deseja realmente excluir?
-    <strong>{{ fornecedor.nome }}</strong>?
-</p>
+    <div class="delete-card">
 
-<form method="POST">
-    {% csrf_token %}
+        <div class="delete-icon">
+            !
+        </div>
 
-    <button type="submit">Confirmar exclusão</button>
-</form>
+        <h2>Excluir fornecedor</h2>
 
-<a href="{% url 'listar_fornecedores' %}">Cancelar</a>
+        <p class="delete-message">
+            Deseja deletar o fornecedor?
+        </p>
+
+        <p class="delete-product-name">
+            {{ fornecedor.nome }}
+        </p>
+
+        <p class="delete-warning">
+            Essa ação não poderá ser desfeita.
+        </p>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="delete-actions">
+
+                <button type="submit" class="confirm-delete-btn">
+                    Confirmar exclusão
+                </button>
+
+                <a href="{% url 'listar_fornecedores' %}" class="cancel-delete-btn">
+                    Cancelar
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
 
 {% endblock %}

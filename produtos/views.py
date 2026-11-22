@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404 # Importa as funções render, redirect e get_object_or_404 do módulo django.shortcuts. A função render é usada para renderizar templates HTML, a função redirect é usada para redirecionar o usuário para outra URL, e a função get_object_or_404 é usada para recuperar um objeto do banco de dados ou retornar um erro 404 se o objeto não for encontrado.
 from .forms import ProdutoForm
-from .models import Produto
+from .models import Produto, Fornecedor
 from django.contrib.auth.decorators import user_passes_test # Define o decorador user_passes_test, que é usado para restringir o acesso a determinadas visualizações com base em uma função de teste personalizada.
 from django.contrib import messages # Importa o módulo messages do Django, que fornece uma maneira de exibir mensagens temporárias para os usuários, como mensagens de sucesso ou erro.
 

@@ -1,0 +1,149 @@
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style_prelogin.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<main class="prelogin-container">
+
+    <!-- Lado esquerdo -->
+    <section class="prelogin-left">
+
+        <header class="prelogin-brand">
+            <div class="brand-symbol">
+                <i class="brand-cube"></i>
+            </div>
+
+            <div class="brand-text">
+                <h1>Stoqer<span>.</span></h1>
+                <p>Gestão de estoque inteligente.</p>
+            </div>
+        </header>
+
+        <div class="prelogin-main">
+
+            <h2>
+                Bem vindo à
+                <span>Stoqer.</span>
+            </h2>
+
+            <p class="prelogin-description">
+                Acesse sua conta para gerenciar seu estoque.
+            </p>
+
+            <a href="{% url 'admin:login' %}?next=/home/"
+               class="prelogin-button">
+
+                <span>Acessar sistema</span>
+                <span class="button-arrow">→</span>
+
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- Lado direito -->
+    <section class="prelogin-right">
+
+        <div class="prelogin-decoration decoration-one"></div>
+        <div class="prelogin-decoration decoration-two"></div>
+
+        <div class="prelogin-banner-content">
+
+            <span class="banner-tag">
+                <span class="tag-dot"></span>
+                GESTÃO INTELIGENTE
+            </span>
+
+            <h2>
+                Gestão de estoque
+                <span>inteligente.</span>
+            </h2>
+
+            <p>
+                Organize, acompanhe e controle seus produtos.
+            </p>
+
+            <!-- Ilustração -->
+            <div class="stock-illustration">
+
+                <div class="illustration-shadow"></div>
+
+                <!-- Prateleira -->
+                <div class="shelf-illustration">
+
+                    <div class="shelf-top"></div>
+
+                    <div class="shelf-level level-one">
+                        <div class="stock-box box-a"></div>
+                        <div class="stock-box box-b"></div>
+                        <div class="stock-box box-c"></div>
+                    </div>
+
+                    <div class="shelf-level level-two">
+                        <div class="stock-box box-d"></div>
+                        <div class="stock-box box-e"></div>
+                    </div>
+
+                    <div class="shelf-level level-three">
+                        <div class="stock-box box-f"></div>
+                        <div class="stock-box box-g"></div>
+                        <div class="stock-box box-h"></div>
+                    </div>
+
+                </div>
+
+                <!-- Checklist -->
+                <div class="stock-checklist">
+
+                    <div class="checklist-clip"></div>
+
+                    <div class="checklist-item">
+                        <span>✓</span>
+                        <div class="checklist-line"></div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <span>✓</span>
+                        <div class="checklist-line"></div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <span>✓</span>
+                        <div class="checklist-line"></div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <span>✓</span>
+                        <div class="checklist-line"></div>
+                    </div>
+
+                </div>
+
+                <!-- Caixas inferiores -->
+                <div class="illustration-box box-bottom-one"></div>
+                <div class="illustration-box box-bottom-two"></div>
+
+                <!-- Elemento decorativo -->
+                <div class="floating-card">
+                    <span class="floating-check">✓</span>
+
+                    <div class="floating-card-text">
+                        <strong>Estoque organizado</strong>
+                        <span>Gestão simplificada</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

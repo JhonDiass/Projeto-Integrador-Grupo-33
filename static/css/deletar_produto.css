@@ -1,0 +1,112 @@
+.delete-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 65vh;
+}
+
+.delete-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(40, 30, 80, 0.05);
+    box-sizing: border-box;
+}
+
+.delete-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #fff0f0;
+    color: #d9534f;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.delete-card h2 {
+    color: #29263d;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.delete-message {
+    color: #77758a;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.delete-product-name {
+    color: #39354f;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.delete-warning {
+    color: #d9534f;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.delete-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.confirm-delete-btn,
+.cancel-delete-btn {
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.confirm-delete-btn {
+    background: #d9534f;
+    color: #ffffff;
+    border: none;
+}
+
+.confirm-delete-btn:hover {
+    background: #c0392b;
+}
+
+.cancel-delete-btn {
+    background: #f5f4f9;
+    color: #77758a;
+    border: 1px solid #dedde8;
+}
+
+.cancel-delete-btn:hover {
+    background: #e9e7f1;
+    color: #39354f;
+}
+
+@media (max-width: 480px) {
+    .delete-card {
+        padding: 22px;
+    }
+
+    .delete-actions {
+        flex-direction: column;
+    }
+
+    .confirm-delete-btn,
+    .cancel-delete-btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
